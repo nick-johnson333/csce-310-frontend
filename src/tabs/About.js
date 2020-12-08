@@ -5,18 +5,21 @@ import { Typography, TextField, Grid, Button } from '@material-ui/core';
 export default function About() {
     const { handleSubmit, errors, control } = useForm();
     const onSubmit = () => {
+        
         if (suggestion !== '') {
             setSuggestion('');
             alert('Submitted suggestion. Thank you.');
         }
-        // (async (data) => {
+
+        // if (suggestion === '') return;
+        // (async (suggestion) => {
         //     const rawResponse = await fetch('http://kicker-almanac-backend.herokuapp.com/user_suggestions', {
         //         method: 'POST',
         //         headers: {
         //         'Accept': 'application/json',
         //         'Content-Type': 'application/json'
         //         },
-        //         body: JSON.stringify({'suggestion': data})
+        //         body: JSON.stringify({'suggestion': suggestion})
         //     });
         //     const content = await rawResponse.json();
 
