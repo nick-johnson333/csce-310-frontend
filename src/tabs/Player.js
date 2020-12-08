@@ -7,7 +7,7 @@ import {
   } from "@material-ui/core";
 import ResultDialog from './cmpt/ResultDialog.js';
 
-// TODO: ResultDialog->map content to table(s)
+
 export default function Player() {
     const { handleSubmit, errors, control } = useForm();
     const onSubmit = _data => {
@@ -20,15 +20,16 @@ export default function Player() {
       fetch( buildURL(data) )
         .then(response => response.json())
         .then(players => {
-          setDialogContent(JSON.stringify(players));
+          setDialogContent(players);
           setShowDialog(true);
+          console.log(dialogContent);
           console.log(players);
         });
     };    
 
     const [height, setHeight] = React.useState(72);
     const changeHeight = (event, newValue) => { setHeight(newValue); };
-    const [weight, setWeight] = React.useState(200);
+    const [weight, setWeight] = React.useState(275);
     const changeWeight = (event, newValue) => { setWeight(newValue); };
 
     const [enableSliders, setEnableSliders] = React.useState({
@@ -39,7 +40,7 @@ export default function Player() {
     };
 
     const [showDialog, setShowDialog] = React.useState(false);
-    const [dialogContent, setDialogContent] = React.useState('');
+    const [dialogContent, setDialogContent] = React.useState({result:[]});
 
     return (<>
       <form onSubmit={ handleSubmit(onSubmit) }>
