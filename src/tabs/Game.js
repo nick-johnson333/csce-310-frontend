@@ -87,7 +87,7 @@ const teams = [
 ]
 
 function buildURL(data) {
-    var URL = 'http://kicker-almanac-backend.herokuapp.com/games?';
+    var URL = 'https://kicker-almanac-backend.herokuapp.com/games?';
     var propertyCount = 0;
 
     const props = ['team_a', 'team_b'];

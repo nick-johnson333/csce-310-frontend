@@ -154,7 +154,7 @@ function displayInches(_inches) {
 }
 
 function buildURL(data) {
-  var URL = 'http://kicker-almanac-backend.herokuapp.com/players?';
+  var URL = 'https://kicker-almanac-backend.herokuapp.com/players?';
   var propertyCount = 0;
 
   const props = ['position', 'team', 'height', 'weight'];

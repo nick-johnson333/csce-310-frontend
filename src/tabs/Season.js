@@ -12,7 +12,7 @@ export default function Season() {
     const { handleSubmit, errors, control } = useForm();
     const onSubmit = data => {
 
-      fetch( `http://kicker-almanac-backend.herokuapp.com/seasons?team=${data.team}` )
+      fetch( `https://kicker-almanac-backend.herokuapp.com/seasons?team=${data.team}` )
         .then(response => response.json())
         .then(team => {
           setDialogContent(team);
