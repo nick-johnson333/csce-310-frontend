@@ -39,7 +39,7 @@ export default function ResultDialog(props) {
                     <TableCell align="center" children={player.number} />
                     <TableCell align="center" children={
                       <Tooltip title={<TooltipTable stats={player.stats} />}>
-                        <Paper children='View' />
+                        <Paper variant='outlined' style={{padding:10}}children='View' />
                       </Tooltip>
                     } />
                   </TableRow>
