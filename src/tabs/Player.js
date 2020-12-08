@@ -5,7 +5,7 @@ import {
     Grid, Typography, Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions,
     Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper,
   } from "@material-ui/core";
-import ResultDialog from './cmpt/ResultDialog.js';
+import { PlayerDialog } from './cmpt/ResultDialogs.js';
 
 
 export default function Player() {
@@ -22,8 +22,6 @@ export default function Player() {
         .then(players => {
           setDialogContent(players);
           setShowDialog(true);
-          console.log(dialogContent);
-          console.log(players);
         });
     };    
 
@@ -119,7 +117,7 @@ export default function Player() {
           </Grid>
 
       </form>
-      <ResultDialog showDialog={showDialog} setShowDialog={setShowDialog} content={dialogContent} />
+      <PlayerDialog showDialog={showDialog} setShowDialog={setShowDialog} content={dialogContent} />
     </>)
 }
 
@@ -173,34 +171,3 @@ function buildURL(data) {
 
   return URL;
 }
-
-// <TableContainer component={Paper}>
-//   <Table>
-//     <TableHead>
-//       <TableRow>
-//         <TableCell>Player</TableCell>
-//         <TableCell>Team</TableCell>
-//         <TableCell>Number</TableCell>
-//         <TableCell>Weight</TableCell>
-//         <TableCell>Height</TableCell>
-//         <TableCell>Age</TableCell>
-//         <TableCell>Birthday</TableCell>
-//         <TableCell>University</TableCell>
-//         <TableCell>Position</TableCell>
-//       </TableRow>
-//     </TableHead>
-//   </Table>
-//   <TableBody>
-//   <TableRow>
-//         <TableCell>Russel Wilson</TableCell>
-//         <TableCell>Seattle Seahawks</TableCell>
-//         <TableCell>3</TableCell>
-//         <TableCell>218</TableCell>
-//         <TableCell>6'2"</TableCell>
-//         <TableCell>30</TableCell>
-//         <TableCell>&nbsp;</TableCell>
-//         <TableCell>West Virginia</TableCell>
-//         <TableCell>QB</TableCell>
-//       </TableRow>
-//   </TableBody>
-// </TableContainer>

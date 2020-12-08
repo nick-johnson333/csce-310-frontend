@@ -20,14 +20,14 @@ export default function About() {
                 The two parts interact in a Restful way and are both currently hosted on Heroku."
             />
             <Typography style={{paddingBottom:20}} children=
-                "There are tables in the database for players, teams, games, seasons, individual 
-                statistics, and user suggestions. The database is currently limited by the scope 
+                "There are tables in the database for players, teams, games, seasons, and individual 
+                statistics. The database is currently limited by the scope 
                 of the free Heroku database. The data is all normalized to limit redundant data."
             />
-            <Typography style={{paddingBottom:20}} children=
+            {/* <Typography style={{paddingBottom:20}} children=
                 "If you are to spot an issue with the data given or have suggestions on how to make
                 our app better, feel free to submit a suggestion below."
-            />
+            /> */}
         </>
     )
 }
